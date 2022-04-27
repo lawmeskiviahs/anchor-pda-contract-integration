@@ -119,7 +119,7 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
                 <WalletModalProvider >
 <Test/>
                 {/* <WalletDisconnectButton /> */}
-                <SendOneLamportToRandomAddress />
+                {/* <SendOneLamportToRandomAddress /> */}
                </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>
@@ -149,47 +149,47 @@ const Content: FC = () => {
 
 //------------------SEND ONE LAMPORT COMPONENT -----------------------
 
-export const SendOneLamportToRandomAddress: FC = () => {
+// export const SendOneLamportToRandomAddress: FC = () => {
 
-  const [sol, setSol] = useState(0)   ;
-   const { connection } = useConnection();
-    const { publicKey, sendTransaction } = useWallet();
- console.log(publicKey?.toBase58(),"//////////");
+//   const [sol, setSol] = useState(0)   ;
+//    const { connection } = useConnection();
+//     const { publicKey, sendTransaction } = useWallet();
+//  console.log(publicKey?.toBase58(),"//////////");
  
-    const onClick = useCallback(async () => {
-        if (!publicKey) throw new WalletNotConnectedError();
-        console.log(publicKey);
-        let add= "EJdcLY3VzzvV23VLsrbcM66fy9cJ8xuzzU2PGLE83RYS"
-        const send = new PublicKey(add)
-        console.log(send.toBase58(),":::::::::::::");
+//     const onClick = useCallback(async () => {
+//         if (!publicKey) throw new WalletNotConnectedError();
+//         console.log(publicKey);
+//         let add= "EJdcLY3VzzvV23VLsrbcM66fy9cJ8xuzzU2PGLE83RYS"
+//         const send = new PublicKey(add)
+//         console.log(send.toBase58(),":::::::::::::");
         
-        const toAddress = Keypair.generate().publicKey;
+//         const toAddress = Keypair.generate().publicKey;
 
 
-        // console.log("New Generated Address => ", toAddress);
+//         // console.log("New Generated Address => ", toAddress);
         
-        const transaction = new Transaction().add(
-            SystemProgram.transfer({
-                fromPubkey: publicKey,
-                toPubkey: send,
-                lamports: 400000000,
-            })
-        );
+//         const transaction = new Transaction().add(
+//             SystemProgram.transfer({
+//                 fromPubkey: publicKey,
+//                 toPubkey: send,
+//                 lamports: 400000000,
+//             })
+//         );
 
-        const signature = await sendTransaction(transaction, connection);
+//         const signature = await sendTransaction(transaction, connection);
 
-        await connection.confirmTransaction(signature, 'processed');
-    }, [publicKey, sendTransaction, connection]);
+//         await connection.confirmTransaction(signature, 'processed');
+//     }, [publicKey, sendTransaction, connection]);
 
-    return (
-      <>
+//     return (
+//       <>
      
-        <Button variant="contained" onClick={onClick} disabled={!publicKey}>
-            Send  lamport to a random address!
-        </Button>
-        </>
-    );
-};
+//         <Button variant="contained" onClick={onClick} disabled={!publicKey}>
+//             Send  lamport to a random address!
+//         </Button>
+//         </>
+//     );
+// };
 
 
 

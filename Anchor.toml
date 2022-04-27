@@ -1,7 +1,7 @@
 [features]
 seeds = false
 [programs.localnet]
-test_pda_fpa = "Gm15Qkbc3DZRozPn2xy6cXe8X77U4zza3NYyxSkUTZaU"
+test_pda_fpa = "A6FhyRRxA6VsrH5yr4jAgPk9t4dGHEynW3D7woqT5qAe"
 
 [registry]
 url = "https://anchor.projectserum.com"

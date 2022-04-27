@@ -1,7 +1,7 @@
 use anchor_lang::prelude::*;
 use solana_program::system_program;
 use solana_program::entrypoint::ProgramResult;
-declare_id!("Gm15Qkbc3DZRozPn2xy6cXe8X77U4zza3NYyxSkUTZaU");
+declare_id!("A6FhyRRxA6VsrH5yr4jAgPk9t4dGHEynW3D7woqT5qAe");
 
 #[program]
 pub mod myprogram {

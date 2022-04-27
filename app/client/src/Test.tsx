@@ -60,7 +60,7 @@ const Test=()=> {
 
 const deposit =async()=>{
   const provider = await getProvider()
-  const programId = new PublicKey("Gm15Qkbc3DZRozPn2xy6cXe8X77U4zza3NYyxSkUTZaU")
+  const programId = new PublicKey("A6FhyRRxA6VsrH5yr4jAgPk9t4dGHEynW3D7woqT5qAe")
 
   const program = new Program( idl , programId , provider );
 
