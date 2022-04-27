@@ -1,0 +1,82 @@
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role="list"], ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizespeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *, :before, :after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+html, body {
+  color: #0e0b0b;
+  background-color: #fff;
+}
+
+.conatiner {
+  width: 1300px;
+  justify-content: flex-end;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+}
+
+.main-conatiner {
+  background-color: #e4e4e4;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+h2 {
+  margin-right: 900px;
+}
+
+.sub-container {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.fields {
+  max-width: 600px;
+  margin: auto;
+}
+
+/*# sourceMappingURL=index.61d3354a.css.map */
